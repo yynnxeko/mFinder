@@ -1,10 +1,10 @@
 // API Configuration
-const String baseUrl = 'http://localhost:5066'; // HTTP endpoint của backend
+const String baseUrl = 'https://findids.net'; // Public API endpoint
 
 // API Endpoints
 class ApiEndpoints {
-  static const String facebookUid = '/api/Uid/fb/extract';
-  static const String tiktokUid = '/api/Uid/tiktok/extract';
+  static const String facebookUid = '/api/get-uid';
+  static const String tiktokUid = '/api/tiktok/get-original-url';
 }
 
 // Validation Messages

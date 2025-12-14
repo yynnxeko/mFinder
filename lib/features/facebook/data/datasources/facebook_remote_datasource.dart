@@ -15,7 +15,7 @@ class FacebookRemoteDataSourceImpl implements FacebookRemoteDataSource {
 
   @override
   Future<FacebookUidModel> getFacebookUid(String profileUrl) async {
-    final response = await apiClient.post(ApiEndpoints.facebookUid, {'Link': profileUrl});
+    final response = await apiClient.post(ApiEndpoints.facebookUid, {'url': profileUrl});
     
     final responseData = json.decode(response.body);
     

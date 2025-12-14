@@ -15,7 +15,7 @@ class TiktokRemoteDataSourceImpl implements TiktokRemoteDataSource {
 
   @override
   Future<TiktokUidModel> getTiktokUid(String profileUrl) async {
-    final response = await apiClient.post(ApiEndpoints.tiktokUid, {'Link': profileUrl});
+    final response = await apiClient.post(ApiEndpoints.tiktokUid, {'url': profileUrl});
     final responseData = json.decode(response.body);
 
     if (response.statusCode == 200) {
